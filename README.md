@@ -7,7 +7,7 @@
 - Productos liquidos de limpieza
 - Desechables
 
-####Ordered list
+#### Ordered list
 
 Yo soy David Rincon un emprendedor insaciable que esta aprendiendo programación en platzi!, excelente plataforma para obtener conocimientos. 
 
@@ -15,4 +15,4 @@ Con mi familia teniamos esta tienda fisica, pero por motivos economicos tuvimos 
 
 Para el proyecto de momento estoy usando solo JavaScript, HTML y CSS.
 
-###End
+### End
