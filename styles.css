@@ -1,0 +1,441 @@
+/* Estilos general  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}:root {
+    /* variables de color y tamaño */
+    --white: #ffffff;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #acd982;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+body{
+    /* acá le estamos quitando las margenes y trayendo la fuente del proyeco */
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+.inactive {
+    display: none;
+}
+
+/* estilos nav bar general */
+
+nav {
+    /* cuando ponemos displey flex, en teorio se tendrian que ubicar los elementos uno al lado del otro, pero por alguna razon queda el elemento que va primero mas abajo que el segundo  
+    esto pasaba porque a uno de los hijos les faltaba displey flex */
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.menu {
+    display: none;
+    cursor: pointer;
+}
+.logo {
+    width: 100px;
+}
+.navbar-left ul,
+.navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.navbar-left{
+    display: flex;
+}
+.navbar-left ul{
+    display: flex;
+    margin-left: 12PX;
+}
+.navbar-left ul li a {
+    text-decoration: none;
+    color: var(--very-light-pink);
+    border: 1px solid var(--white);
+    padding: 8px;
+}
+.navbar-left ul li a:hover {
+    /* recordemos que la pseudoclase hover hace que cambie el color del elemento una vez yo paso el cursor por arriba del elemento afectado */
+    color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar-email {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-right: 8px;
+}
+.navbar-email:hover {
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+.navbar-shopping-cart {
+    position: relative;
+    cursor: pointer;
+}
+.navbar-shopping-cart div {
+    /* antes de poner displey felx no me centraba el numero 2, es decir el contenido del div, segun el inspector era porque tenia propiedades de block, entonces tenia que volverlo despley flex para que las propiedades justify-content se aplicaran */
+    display: flex;
+    width: 16px;
+    height: 16px;
+    background-color: var(--hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    /* cuando ponemos absolute, es porque queremos que el contenido de la etiqueta en el mismo espacio del padre, para esto el padre debe ser relative */
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* menu del desktop */
+
+.desktop-menu {
+    position: absolute;
+    background: var(--white);
+    top: 60px;
+    right: 60px;
+    width: 140px;
+    height: auto;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+}
+.desktop-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+.desktop-menu ul li {
+    text-align: end;
+}
+.desktop-menu ul li:nth-child(1),
+.desktop-menu ul li:nth-child(2) {
+    font-weight: bold;
+}
+.desktop-menu ul li:last-child {
+    /* aca estamos estilizando last child que significa el ultimo hijo de la lista */
+    padding-top: 20px;
+    border-top: 1px solid var(--very-light-pink);
+}
+.desktop-menu ul li:last-child a {
+    /* aca estamos estilizando last child que significa el ultimo hijo de la lista */
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+.desktop-menu ul li a {
+    color: var(--black);
+    text-decoration: none;
+    margin-bottom: 20px; /*la etiqueta *a* es un elemento inline por lo tanto debemos decirle que es un elemento inline pero que tenga caracteristicas de bloque con display: inline-blok */
+    display: inline-block;
+}
+
+/* Menu del mobile */
+
+.mobile-menu {
+    width: 100%;
+    position: absolute;
+    top: 61px;
+    /* box-sizing: border-box lo que hace es que incluye el tamaño del padding al tamaño del contenido para que no la caja no se agrande y tengamos problemas con el responsive, porque cuando le agregamos padding al contenedor externo y le ponemos un heigth del 100% realmente queda el 100% mas los px que se le pongan al padding y por lo tanto va a quedar con un scroll no tan chevere :S */
+    height: 90vh;
+    background-color: var(--white);
+    /* display: flex;
+     flex por defecto viene para ubicar llos contenedores uno al lado del otro con flex-direction le cambiamos la direccion para que se puedan ubicar uno abajo de otro con column 
+    flex-direction: column;
+    justify-content: space-between; */
+
+    /* toco comentar esto porque de lo contrario no funciona la clase inactive */
+}
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+.mobile-menu ul {
+    padding: 0;
+    /* margin: 24px 0 0; */
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul li{
+    margin: 24px;
+}
+.mobile-menu .email {
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile-menu .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green);
+}
+ 
+/* produc detail y carrito */
+
+.product-detail {
+    width: 360px;
+    padding: 4px 24px;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    border-radius: 12px;
+}
+.title-container {
+    display: flex;
+}
+.title-container img {
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--text-input-field);
+    margin-bottom: 24px;
+    border-radius: 8px;
+    padding: 0 24px;
+}
+.order p:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+.order p:nth-child(2) {
+    text-align: end;
+    font-weight: bold;
+}
+.order span:nth-child(1) {
+    font-size: var(--md); 
+    font-weight: bold;
+}
+.shopping-cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+.shopping-cart figure{
+    margin: 0;
+}
+.shopping-cart figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.shopping-cart p:nth-child(2){
+    color: var(--very-light-pink);
+}
+.shopping-cart p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    /* quita el borde negro que viene por defecto para poder que quede es solo badgraund-color que nosotros le pusimos */
+    border: none;
+    color: var(--white);
+    width: 100%;
+    /* este cursor pointer es para que caundo pasemos por arriba del boton ya no me salga la flecha sino una manito indicando que estoy arriba del boton */
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+/* Poduct list */
+.cards-container {
+    /* para poder empezar a estilizar todas esas imagener o cards de cada producto, lo primero es agarrar el contenedor de las cards y lo que hacemos es generar nuestras grid para que cada una de esas cards quepa en esas grids (cuadriculas) para que los elementos quepan en ellas */
+    display: grid;
+    /* para crear columnas utilizamos grid-template-columns (si queremos 2 colomns del mismo tamaño podríamos ponerles dos propiedades (grid-template-columns: 1fr 1fr) sin embargo en este caso vamos a usar una funcion que se llama REPEAT la  viene con dos parametros el primero es la cantidad de columnas que deseamos y el segundo el tamaño de cada una de esas columnas / ese repeat tiene una propiedad que es AUTO-FILL una propiedad que significa que se va a llenar automaticamente dependiendo de la cantidad que quepa y en el segundo le ponemos el tamaño en pixeles ejemplo 240 px cada una de las cards que se cree va a tener un tamaño de 240px segun este ejemplo )  */
+    grid-template-columns: repeat(AUTO-FILL, 240px);
+    /* la propiedad gap lo que hace es que nos crea un espacio entre todos los hijos dentro del contenedor donde se llama */
+    gap: 26px;
+    place-content: center;
+    margin-top: 24px;
+}
+.product-card {
+    /* para que funcione bien grid-template-columns: repeat(AUTO-FILL, 240px) el comando que pusimos en la clase .cards-container debemos darle un tamaño a las cards  */
+    width: 240px;
+}
+.product-card img {
+    /* para que funcione bien grid-template-columns: repeat(AUTO-FILL, 240px) el comando que pusimos en la clase .cards-container debemos darle tambien el tamaño a las imagenes que estan dentro de esas cards que puede ser del 100% que quiere decir que puede ser de la misma cantidad del padre*/
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    /* object-fit: cover se usa pra que la imagen no se distorcione por la medida del padre si nos mas bien que se adecue guardando las proporciones de la misma (ojo esto quiere decir que si la imagen es rectangular y el padre es cuadrado la imagen no va a salir completa) */
+    object-fit: cover;
+}
+.product-info {
+    /* ponemos display flex para que podamos poner la caja del div que esta dentro de la clase junto al lado de la caja figure que contiene a la img */
+    display: flex;
+    /* space-between lo ponemos para que haya un espacio en la mitad de los dos contenedores o mas bien ubicar los contenedores en extremos opuestos ya sea vertical o horizontal, en este caso horizontal y en el ejemplo de la pantalla de create (cuenta o perfil)vertical */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 0 8px 0 8px;
+
+}
+.product-info figure {
+    /* aca le quitamos la margen al elemento que esta dentro de la etiqueta figure */
+    margin: 0;
+    cursor: pointer;
+}
+.product-info div p:nth-child(1) {
+    /* el primer parrafo que este dentro de div que este dentro de product-info va a tener los siguientes estilos 
+    el primer cambio es que va a ser mas grueso
+    el segundo cambio es que va a ser mediana la letra
+    el tercero modificacion del margen de arriba
+    el cuarto modificacion del margen de abajo*/
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.product-info div p:nth-child(2) {
+    /* el segundo parrafo que este dentro de div que este dentro de product-info va a tener los siguientes estilos 
+    el primer cambio es que va a ser pequeña la letra
+    el segundo cambio que va a tener margen de arriba de 0
+    el tercer cambio que va a tener margen de abajo de 0
+    el cuarto le cambiamos el color de la letra para que sea mas clara y resalte menos*/
+    font-size: var(--sm);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: var(--very-light-pink);
+}
+.product-info figure img {
+    /* solamente las imagenes que esten en el contenedor figure dentro de la clase product-info van a resivir las siguientes modificaciones */
+    width: 35px;
+    height: 35px;
+}
+
+/* extended-product-detail */
+
+.extended-product-detail {
+    background-color: var(--white);
+    width: 360px;
+    padding-bottom: 24px;
+    position: absolute;
+    right: 0;
+}
+.product-detail-close {
+    background: var(--white);
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    /* position absolute siempre ubica al elemento en la posicion 0,0 del padre a partir de ahi comenzamos a moverlo con los atributos de abajo */
+    top: 24px;
+    left: 24px;
+    /* z-index indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor. */
+    z-index: 2;
+    padding: 12px;
+    border-radius: 50%;
+    display:flex
+}
+.product-detail-close:hover {
+    cursor: pointer;
+}
+.product-detail-close img {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.extended-product-detail > img:nth-child(2) {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 24px 24px;
+}
+.extended-product-info {
+    margin: 24px 24px 0 24px;
+}
+.extended-product-info p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.extended-product-info p:nth-child(2) {
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+.extended-product-info p:nth-child(3) {
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 36px;
+}
+.primary-button {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    /* quita el borde negro que viene por defecto para poder que quede es solo badgraund-color que nosotros le pusimos */
+    border: none;
+    color: var(--white);
+    width: 100%;
+    /* este cursor pointer es para que caundo pasemos por arriba del boton ya no me salga la flecha sino una manito indicando que estoy arriba del boton */
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .menu {
+        display: block;
+    }
+    .navbar-left ul, 
+    .navbar-email,
+    .desktop-menu {
+        display: none;
+    }
+    .product-detail,
+    .extended-product-detail {
+        width: 100%;
+    }
+    .cards-container {
+        /* para crear columnas utilizamos grid-template-columns (si queremos 2 colomns del mismo tamaño podríamos ponerles dos propiedades (grid-template-columns: 1fr 1fr) sin embargo en este caso vamos a usar una funcion que se llama REPEAT la  viene con dos parametros el primero es la cantidad de columnas que deseamos y el segundo el tamaño de cada una de esas columnas / ese repeat tiene una propiedad que es AUTO-FILL una propiedad que significa que se va a llenar automaticamente dependiendo de la cantidad que quepa y en el segundo le ponemos el tamaño en pixeles ejemplo 240 px cada una de las cards que se cree va a tener un tamaño de 240px segun este ejemplo )  */
+        /* en el @media cambio el tamaño porque quiero que en movile salgan dos cuadros por fila */
+        grid-template-columns: repeat(AUTO-FILL, 140px);
+    }
+    .product-card {
+        /* para que funcione bien grid-template-columns: repeat(AUTO-FILL, 240px) el comando que pusimos en la clase .cards-container debemos darle un tamaño a las cards  */
+        width: 140px;
+    }
+    .product-card img {
+        /* para que funcione bien grid-template-columns: repeat(AUTO-FILL, 240px) el comando que pusimos en la clase .cards-container debemos darle tambien el tamaño a las imagenes que estan dentro de esas cards que puede ser del 100% que quiere decir que puede ser de la misma cantidad del padre*/
+        width: 140px;
+        height: 140px;
+    }
+}
+@media (min-width: 641px) {
+    .mobile-menu {
+        display: none;
+    }
+}
