@@ -29,7 +29,7 @@ function toggleDesktopMenu () {
 
     desktopMenu.classList.toggle("inactive");
 }
-
+    
 function toggleMobileMenu () {
     extendedProductDetail.classList.add("inactive")
 
@@ -72,18 +72,21 @@ function closeProductDetailAsaid () {
 
 const productList = [];
 productList.push ({
+    id: 1,
     name: "Bike",
     price: 120,
     image: "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=600"
 });
 
 productList.push ({
+    id: 2,
     name: "Tv",
     price: 300,
     image: "https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg?auto=compress&cs=tinysrgb&w=600"
 });
 
 productList.push ({
+    id: 3,
     name: "Laptop",
     price: 620,
     image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -92,19 +95,15 @@ productList.push ({
 
 function agregarProductoAlCarrito (event) {
     console.log("Entro a la funcion");
-    
-    let product = {
-        name: objectSelection.getAttribute("name"),
-        price: objectSelection.getAttribute("price"),
-        image: objectSelection.getAttribute("src")
-    };
 
     renderProductsSelections([product]);
 
-    spanCantiProducts = document.querySelector(".numeroProductosAgregados");
-    numeroProductosAgregados++
-    spanCantiProducts.innerText = numeroProductosAgregados
+        spanCantiProducts = document.querySelector(".numeroProductosAgregados");
+        numeroProductosAgregados++
+        spanCantiProducts.innerText = numeroProductosAgregados
 }
+
+
 
 function renderProducts (arr) {
     for (product of arr) {
@@ -112,25 +111,25 @@ function renderProducts (arr) {
         const productCard = document.createElement("div")
         productCard.classList.add('product-card');
 
-        productImg = document.createElement('img');
-        productImg.setAttribute('src',product.image);
+        productImg = document.createElement("img");
+        productImg.setAttribute("src",product.image);
         productImg.addEventListener("click", openExtendedProductDetail)
+        
+        const productInfo = document.createElement("div");
+        productInfo.classList.add("product-info");
 
-        const productInfo = document.createElement('div');
-        productInfo.classList.add('product-info');
-
-        const productInfoDiv = document.createElement('div');
-        const productPrice = document.createElement('p');
-        productPrice.innerText ='$'+product.price;
-        const productName = document.createElement('p');
+        const productInfoDiv = document.createElement("div");
+        const productPrice = document.createElement("p");
+        productPrice.innerText ="$"+product.price;
+        const productName = document.createElement("p");
         productName.innerText = product.name;
         productInfoDiv.append(productPrice, productName);
-
-        const productInfoFigure = document.createElement('figure');
-
-        const productImgCart = document.createElement('img');
+        
+        const productInfoFigure = document.createElement("figure");
+        
+        const productImgCart = document.createElement("img");
         productImgCart.classList.add("icon-shopping-car");
-        productImgCart.setAttribute('src','./icons/bt_add_to_cart.svg');
+        productImgCart.setAttribute("src","./icons/bt_add_to_cart.svg");
         // productImgCart.onclick = agregarProductoAlCarrito;
         // productImgCart.addEventListener("click",function(){ agregarProductoAlCarrito (argumento) }); ** En caso de que necesite un arguento para la funcion que quiero relacionar o asociar, entonces deberia meter ese funcion dentro de otra para que no me genere un error como en el ejemplo
         productImgCart.addEventListener("click", agregarProductoAlCarrito);
