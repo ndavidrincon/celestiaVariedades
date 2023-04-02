@@ -93,25 +93,24 @@ productList.push ({
 });
 
 
-function agregarProductoAlCarrito (event) {
+function agregarProductoAlCarrito () {
     console.log("Entro a la funcion");
 
-    renderProductsSelections([product]);
-
-        spanCantiProducts = document.querySelector(".numeroProductosAgregados");
-        numeroProductosAgregados++
-        spanCantiProducts.innerText = numeroProductosAgregados
+    spanCantiProducts = document.querySelector(".numeroProductosAgregados");
+    numeroProductosAgregados++
+    spanCantiProducts.innerText = numeroProductosAgregados
 }
 
 
 
-function renderProducts (arr) {
-    for (product of arr) {
+function renderProducts (products) {
+
+    for ( const product of products) {
 
         const productCard = document.createElement("div")
         productCard.classList.add('product-card');
 
-        productImg = document.createElement("img");
+        const productImg = document.createElement("img");
         productImg.setAttribute("src",product.image);
         productImg.addEventListener("click", openExtendedProductDetail)
         
@@ -132,7 +131,10 @@ function renderProducts (arr) {
         productImgCart.setAttribute("src","./icons/bt_add_to_cart.svg");
         // productImgCart.onclick = agregarProductoAlCarrito;
         // productImgCart.addEventListener("click",function(){ agregarProductoAlCarrito (argumento) }); ** En caso de que necesite un arguento para la funcion que quiero relacionar o asociar, entonces deberia meter ese funcion dentro de otra para que no me genere un error como en el ejemplo
-        productImgCart.addEventListener("click", agregarProductoAlCarrito);
+        productImgCart.addEventListener("click", () => {
+            renderProductsSelections(product);
+            agregarProductoAlCarrito();
+        });
 
         productInfoFigure.appendChild(productImgCart);
         productInfo.append(productInfoDiv, productInfoFigure);
@@ -143,22 +145,20 @@ function renderProducts (arr) {
 
 renderProducts(productList)
 
-function renderProductsSelections (arr) {
-    for (product of arr) {
+function renderProductsSelections (product) {
 
-        const figureMiniature = document.createElement("figure");
-        const imgFigureMiniature = document.createElement("img");
-        imgFigureMiniature.setAttribute("src", product.image);
-        figureMiniature.appendChild(imgFigureMiniature);
+    const figureMiniature = document.createElement("figure");
+    const imgFigureMiniature = document.createElement("img");
+    imgFigureMiniature.setAttribute("src", product.image);
+    figureMiniature.appendChild(imgFigureMiniature);
 
-        const pProductNameSelection = document.createElement("p");
-        pProductNameSelection.innerText = product.name;
-        const pProductPriceSelection = document.createElement("p");
-        pProductPriceSelection.innerText = "$" + product.price;
+    const pProductNameSelection = document.createElement("p");
+    pProductNameSelection.innerText = product.name;
+    const pProductPriceSelection = document.createElement("p");
+    pProductPriceSelection.innerText = "$" + product.price;
 
-        const imgIconClose = document.createElement("img");
-        imgIconClose.setAttribute("src", "./icons/icon_close.png");
+    const imgIconClose = document.createElement("img");
+    imgIconClose.setAttribute("src", "./icons/icon_close.png");
 
-        shoppingCartSelection.append(figureMiniature, pProductNameSelection, pProductPriceSelection, imgIconClose);
-    }
+    shoppingCartSelection.append(figureMiniature, pProductNameSelection, pProductPriceSelection, imgIconClose);
 }
