@@ -207,6 +207,7 @@ nav {
 .title {
     font-size: var(--lg);
     font-weight: bold;
+    margin-bottom: .8rem; 
 }
 .order {
     display: grid;
@@ -243,9 +244,18 @@ nav {
 .shopping-cart figure img{
     width: 70px;
     height: 70px;
-    border-radius: 20px;
+    border-radius: .8rem;
     object-fit: cover;
 }
+/* .shopping-cart img {
+    cursor: pointer;
+} */
+.x:hover{
+    cursor: pointer;
+    border: solid .1rem var(--hospital-green);
+    border-radius: .4rem;
+}
+
 .shopping-cart p:nth-child(2){
     color: var(--very-light-pink);
 }
