@@ -71,11 +71,19 @@ function closeProductDetailAsaid () {
 const productsInTheCar = []
 
 const productList = [];
+
 productList.push ({
     id: 1,
-    name: "Bike",
-    price: 120,
-    image: "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=600"
+    name: "Trapeador bicolor 900gr",
+    price: 8000,
+    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg"
+});
+
+productList.push ({
+    id: 1,
+    name: "Trapeador bicolor 1200gr",
+    price: 10000,
+    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg"
 });
 
 productList.push ({
