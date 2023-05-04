@@ -6,19 +6,20 @@ const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const burgerIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const aside = document.querySelector(".product-detail");
-const extendedProductDetail = document.querySelector(".extended-product-detail");
+const contendAside = document.querySelector(".contendAside");
 const cardsContainer = document.querySelector(".cards-container");
 const iconShoppingCar = document.querySelector(".icon-shopping-car");
+const spanCantiProducts = document.querySelector(".numeroProductosAgregados");
+
 let numeroProductosAgregados = 0
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
 burgerIcon.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
-productDetailCloseIcon.addEventListener("click", closeProductDetailAsaid);
 
 
 function toggleDesktopMenu () {
-    extendedProductDetail.classList.add("inactive")
+    contendAside.classList.add("inactive")
     const isMenuCarritoIconClosed = menuCarritoIcon.classList.contains("inactive");
 
     if (!isMenuCarritoIconClosed) {
@@ -29,7 +30,7 @@ function toggleDesktopMenu () {
 }
     
 function toggleMobileMenu () {
-    extendedProductDetail.classList.add("inactive")
+    contendAside.classList.add("inactive")
 
     const isMenuCarritoIconClosed = menuCarritoIcon.classList.contains("inactive");
 
@@ -47,25 +48,13 @@ function toggleCarritoAside () {
         mobileMenu.classList.add("inactive")
     };
     
-    const isProductDetailAsaid = extendedProductDetail.classList.contains("inactive");
+    const isProductDetailAsaid = contendAside.classList.contains("inactive");
     
     if (!isProductDetailAsaid) {
-        extendedProductDetail.classList.add("inactive");
+        contendAside.classList.add("inactive");
     }
     
     aside.classList.toggle("inactive");
-}
-
-function openExtendedProductDetail () {
-    aside.classList.add("inactive");
-    desktopMenu.classList.add("inactive");
-    mobileMenu.classList.add("inactive");
-
-    extendedProductDetail.classList.remove("inactive"); // remove porque le queremos quitar la clase inactive para que aparezca;
-}
-
-function closeProductDetailAsaid () {
-    extendedProductDetail.classList.add("inactive");
 }
 
 const productsInTheCar = []
@@ -73,31 +62,38 @@ const productsInTheCar = []
 const productList = [];
 
 productList.push ({
-    id: 1,
+    id: 0,
     name: "Trapeador bicolor 900gr",
     price: 8000,
-    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg"
+    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg",
+    detail: "Hecho 100% en algodon, lo tenemos en color blanco ó blanco con negro."
+
 });
 
 productList.push ({
     id: 1,
     name: "Trapeador bicolor 1200gr",
     price: 10000,
-    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg"
+    image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg",
+    detail: "Hecho 100% en algodon, lo tenemos en color blanco ó blanco con negro."
+
 });
 
 productList.push ({
     id: 2,
-    name: "Tv",
-    price: 800,
-    image: "https://images.pexels.com/photos/6976094/pexels-photo-6976094.jpeg?auto=compress&cs=tinysrgb&w=600"
+    name: "Cepillo de piso",
+    price: 7000,
+    image: "https://i.ibb.co/XC7SGW0/cepillo-duro.jpg",
+    detail: "Hecho 100% en algodon, lo tenemos en color blanco ó blanco con negro."
 });
 
 productList.push ({
     id: 3,
     name: "Laptop",
     price: 620,
-    image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=600"
+    image: "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=600",
+    detail: "Hecho 100% en algodon, lo tenemos en color blanco ó blanco con negro."
+
 });
 
 function renderProducts (products) {
@@ -109,7 +105,10 @@ function renderProducts (products) {
 
         const productImg = document.createElement("img");
         productImg.setAttribute("src",product.image);
-        productImg.addEventListener("click", openExtendedProductDetail)
+        productImg.addEventListener("click", () => {
+            contendAside.classList.remove("inactive");
+            renderDetailProduct(product);
+        });
         
         const productInfo = document.createElement("div");
         productInfo.classList.add("product-info");
@@ -143,7 +142,7 @@ renderProducts(productList)
 
 function renderProductsSelections (product) {
 
-    productsInTheCar.push(product)
+    productsInTheCar.push(product) // esta linea agrega el producto al final de lista del array de productos
 
     const shoppingCartSelection = document.createElement("div");
     shoppingCartSelection.classList.add("shopping-cart")
@@ -170,7 +169,46 @@ function renderProductsSelections (product) {
     shoppingCartSelection.append(figureMiniature, pProductNameSelection, pProductPriceSelection, imgIconClose);
     productsSelectionContainer.appendChild(shoppingCartSelection)
 
-    spanCantiProducts = document.querySelector(".numeroProductosAgregados");
     numeroProductosAgregados++
     spanCantiProducts.innerText = numeroProductosAgregados
+}
+
+function renderDetailProduct (product) {
+
+    const aside = document.createElement("aside");
+    aside.classList.add("extended-product-detail");
+
+
+    const divImgClose = document.createElement("div");
+    divImgClose.classList.add("product-detail-close");
+    divImgClose.addEventListener("click", () => {
+        contendAside.removeChild(aside);
+    });
+    const imgIconCloseAside = document.createElement("img");
+    imgIconCloseAside.setAttribute("src", "./icons/icon_close.png");
+    divImgClose.appendChild(imgIconCloseAside);
+
+    const imgProduct = document.createElement("img");
+    imgProduct.setAttribute("src", product.image);
+
+    const divDescription = document.createElement("div");
+    divDescription.classList.add("extended-product-info");
+    const pPrice = document.createElement("p");
+    pPrice.innerText = product.price;
+    const pName = document.createElement("p");
+    pName.innerText = product.name;
+    const pDetail = document.createElement("p");
+    pDetail.innerText = product.detail;
+    const button = document.createElement("button");
+    button.classList.add("primary-button")
+    button.addEventListener("click", () => {
+        renderProductsSelections(product);
+    });
+    const imgAddToCard = document.createElement("img");
+    imgAddToCard.setAttribute("src", "./icons/bt_add_to_cart.svg");
+    button.appendChild(imgAddToCard);
+
+    divDescription.append(pPrice, pName, pDetail, button);
+    aside.append(divImgClose, imgProduct, divDescription);
+    contendAside.appendChild(aside);
 }

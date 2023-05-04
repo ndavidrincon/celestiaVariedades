@@ -299,6 +299,8 @@ nav {
     border-radius: 20px;
     /* object-fit: cover se usa pra que la imagen no se distorcione por la medida del padre si nos mas bien que se adecue guardando las proporciones de la misma (ojo esto quiere decir que si la imagen es rectangular y el padre es cuadrado la imagen no va a salir completa) */
     object-fit: cover;
+    border: 1px solid var(--hospital-green);
+    cursor: pointer;
 }
 .product-info {
     /* ponemos display flex para que podamos poner la caja del div que esta dentro de la clase junto al lado de la caja figure que contiene a la img */
@@ -368,6 +370,7 @@ nav {
 }
 .product-detail-close:hover {
     cursor: pointer;
+    background: var(--dark-blue);
 }
 .product-detail-close img {
     position: absolute;
@@ -406,12 +409,12 @@ nav {
     border-radius: 8px;
     /* quita el borde negro que viene por defecto para poder que quede es solo badgraund-color que nosotros le pusimos */
     border: none;
-    color: var(--white);
     width: 100%;
     /* este cursor pointer es para que caundo pasemos por arriba del boton ya no me salga la flecha sino una manito indicando que estoy arriba del boton */
     cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
+    height: 50px;
+}
+.primary-button img {
     height: 50px;
 }
 .add-to-cart-button {
