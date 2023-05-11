@@ -339,6 +339,9 @@ nav {
     margin-bottom: 0px;
     color: var(--very-light-pink);
 }
+.Product-Info-Price li {
+    list-style: none;
+}
 .product-info figure img {
     /* solamente las imagenes que esten en el contenedor figure dentro de la clase product-info van a resivir las siguientes modificaciones */
     width: 35px;
