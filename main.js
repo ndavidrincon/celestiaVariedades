@@ -92,7 +92,7 @@ productList.push ({
     id: 1,
     name: "Medio litro Detergente tipo rey",
     price: 4800,
-    image: "https://i.ibb.co/4g6KjDV/Detergente-floral.jpg",
+    image: "https://i.ibb.co/2M1zKCp/Detergente-tipo-rey.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, detergente multiusos, despercudido profundo."
 });
@@ -110,7 +110,7 @@ productList.push ({
     id: 1,
     name: "Galon Detergente tipo rey",
     price: 27200,
-    image: "https://i.ibb.co/4g6KjDV/Detergente-floral.jpg",
+    image: "https://i.ibb.co/2M1zKCp/Detergente-tipo-rey.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, detergente multiusos, despercudido profundo."
 });
@@ -121,7 +121,7 @@ productList.push ({
     price: 4300,
     image: "https://i.ibb.co/gmwj5fq/Suavizante-espeso.jpg",
     type: "liquido",
-    detail: "Hecho 100% en Colombia, detergente multiusos, despercudido profundo."
+    detail: "Hecho 100% en Colombia, Suavizante espeso, aroma perdurable y producto rendidor."
 });
 
 productList.push ({

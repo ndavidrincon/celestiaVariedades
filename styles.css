@@ -29,6 +29,10 @@ body{
 nav {
     /* cuando ponemos displey flex, en teorio se tendrian que ubicar los elementos uno al lado del otro, pero por alguna razon queda el elemento que va primero mas abajo que el segundo  
     esto pasaba porque a uno de los hijos les faltaba displey flex */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
     display: flex;
     justify-content: space-between;
     padding: 0 24px;
@@ -191,8 +195,9 @@ nav {
 
 .product-detail {
     width: 360px;
+    top: 61px;
     padding: 4px 24px;
-    position: absolute;
+    position: fixed;
     right: 0;
     background-color: var(--white);
     border-radius: 12px;
@@ -247,9 +252,9 @@ nav {
     border-radius: .8rem;
     object-fit: cover;
 }
-/* .shopping-cart img {
-    cursor: pointer;
-} */
+.x {
+    margin-right: .4rem;
+}
 .x:hover{
     cursor: pointer;
     border: solid .1rem var(--hospital-green);
@@ -286,7 +291,7 @@ nav {
     /* la propiedad gap lo que hace es que nos crea un espacio entre todos los hijos dentro del contenedor donde se llama */
     gap: 26px;
     place-content: center;
-    margin-top: 24px;
+    margin-top: 90px;
 }
 .product-card {
     /* para que funcione bien grid-template-columns: repeat(AUTO-FILL, 240px) el comando que pusimos en la clase .cards-container debemos darle un tamaño a las cards  */
@@ -350,11 +355,17 @@ nav {
 
 /* extended-product-detail */
 
+.products-selection-container {
+    height: 40vh;
+    overflow-y: auto;
+}
+
 .extended-product-detail {
     background-color: var(--white);
     width: 360px;
+    top: 61px;
     padding-bottom: 24px;
-    position: absolute;
+    position: fixed;
     right: 0;
 }
 .product-detail-close {
