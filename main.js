@@ -239,7 +239,7 @@ productList.push ({
 productList.push ({
     id: 5,
     name: "Litro limpia pisos liquido",
-    price: 6800,
+    price: 7500,
     image: "https://i.ibb.co/zhWwh2n/Limpia-pisos-lavanda.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, limpiador desinfectante para pisos liquido, Disponible en aroma lavanda"
