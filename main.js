@@ -84,7 +84,7 @@ productList.push ({
 productList.push ({
     id: 0,
     name: "Galon Detergente floral. 3Lt.",
-    price: 27200,
+    price: 25200,
     image: "https://i.ibb.co/tPSvDrs/Galon-detergente-floral.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, no mancha la ropa, despercudido profundo."
@@ -111,7 +111,7 @@ productList.push ({
 productList.push ({
     id: 1,
     name: "Galon Detergente tipo rey. 3Lt.",
-    price: 27200,
+    price: 25200,
     image: "https://i.ibb.co/Wcp55J4/Galon-rey-liquido.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, detergente multiusos, despercudido profundo."
@@ -165,7 +165,7 @@ productList.push ({
 productList.push ({
     id: 3,
     name: "Galon Jabon para manos. 3Lt.",
-    price: 22000,
+    price: 21000,
     image: "https://i.ibb.co/DGG7bpy/Galon-jabon-para-manos.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, Jabon para manos, de momento disponible en frutos rojos y avena. Delicado con tus manos."
@@ -192,7 +192,7 @@ productList.push ({
 productList.push ({
     id: 4,
     name: "Galon vinagre industrial. 3Lt.",
-    price: 4000,
+    price: 21000,
     image: "https://i.ibb.co/8KzpZh0/Galon-vinagre-industrial.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, Al 15% de consentración. Un producto ideal para las personas que no pueden asear con cloro. Limpia y desinfecta."
@@ -210,7 +210,7 @@ productList.push ({
 productList.push ({
     id: 5,
     name: "Litro limpia pisos espeso",
-    price: 6800,
+    price: 7500,
     image: "https://i.ibb.co/TkJFyCf/fabuloso-maracuya.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, limpiador desinfectante para pisos espeso, tiene un aroma tan rico que te va a provocar comertelo (No se come). Disponible en aroma maracuya y lima limon"
@@ -237,7 +237,7 @@ productList.push ({
 productList.push ({
     id: 5,
     name: "Litro limpia pisos liquido",
-    price: 6500,
+    price: 6800,
     image: "https://i.ibb.co/zhWwh2n/Limpia-pisos-lavanda.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia, limpiador desinfectante para pisos liquido, Disponible en aroma lavanda"
@@ -273,7 +273,7 @@ productList.push ({
 productList.push ({
     id: 5,
     name: "Galon Hipoclorito al 0.8%. 3.8 Lt.",
-    price: 4300,
+    price: 12000,
     image: "https://i.ibb.co/wcpVhnh/Galon-blanqueador.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. "
@@ -300,7 +300,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Desmanchador ropa color. 3.8 Lt",
-    price: 22000,
+    price: 21000,
     image: "https://i.ibb.co/0mghym6/Galon-clorox-ropa-color.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Este producto es un potencializador de lavado, no remplaza el detergente fue creado para mejorar el resultado de cada lavada 😊"
@@ -327,7 +327,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Desengrasante industrial. 3.8 Lt",
-    price: 26000,
+    price: 25000,
     image: "https://i.ibb.co/5Mn7m83/Galon-desengrasante-industrial.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Este producto es un desengrasante fuerte para uso industrial y grasa profunda, en su aplicasión se recomienda el uso de tapabocas y guantes, tener cuidado con salpicaciones en cualquier parte del cuerpo, en ese caso lavar con abundante agua. 😊"
@@ -354,7 +354,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Desengrasante espeso. 3.8 Lt",
-    price: 4800,
+    price: 26000,
     image: "https://i.ibb.co/sjZ5Ffd/Galon-desengrasante-multiusos.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Este producto es un desengrasante Multiusos para uso domestico, cocina, baños, ropa, etc, en su aplicasión tener cuidado con salpicaciones en cualquier parte del rostro, en ese caso lavar con abundante agua. 😊"
@@ -372,7 +372,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Litro Gel antibacterial.",
-    price: 5200,
+    price: 9900,
     image: "https://i.ibb.co/3W35Kh0/Gel-antibacterial.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Sustancia que destruye las bacterias o les impide que crezcan y causen enfermedad, se emplea como complemento del agua y el jabón para lavarse las manos.  😊"
@@ -381,7 +381,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Gel antibacterial. 3.8 Lt",
-    price: 5200,
+    price: 31000,
     image: "https://i.ibb.co/23GHvSK/Galon-gel-antibacterial.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Sustancia que destruye las bacterias o les impide que crezcan y causen enfermedad, se emplea como complemento del agua y el jabón para lavarse las manos.  😊"
@@ -408,7 +408,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon jabon liquido loza espeso. 3.8 Lt",
-    price: 28000,
+    price: 26000,
     image: "https://i.ibb.co/PmdZdpb/Galon-lava-loza.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Detergente multipropósito, que además puedes usar para limpiar tu cocina y grifería o quitar manchas de la ropa. Amigable con la delicada piel de tus manos.  😊"
@@ -435,7 +435,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Limpia vidrios. 3.8 Lt.",
-    price: 2200,
+    price: 20500,
     image: "https://i.ibb.co/s9BXkbp/Galon-de-limpia-vidrios.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Un limpiavidrios es un producto creado cuyos ingredientes facilitan la limpieza y mantenimiento de vidrios, cristales y espejos ya que remueven la suciedad, grasas e imperfecciones, también prometen un secado rápido con el plus de un agradable aroma. 😊"
@@ -489,7 +489,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Alcohol industrial 96%.",
-    price: 4700,
+    price: 39000,
     image: "https://i.ibb.co/qk53Rwq/Galon-alcohol-industrial.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. 😊"
@@ -516,7 +516,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Shampoo para carros.",
-    price: 26000,
+    price: 25000,
     image: "https://i.ibb.co/Cb3Vrcp/Galon-shampoo-para-carros.jpg",
     type: "liquido",
     detail: "Hecho 100% en Colombia. Shampoopara autos que brilla, protege y desengrasa sin manchar con aroma a chicle y espuma abundante. 😊"
@@ -543,7 +543,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon silicona liquida espesa.",
-    price: 52000,
+    price: 45000,
     image: "https://i.ibb.co/FgqtyPZ/Galon-silicona.jpg",
     type: "liquido",
     detail: "Hecho en Colombia. La silicona se usa para limpiar y mantener las partes plásticas que se encuentran en el interior del vehículo, para muebles de cuero entre otras cosas. 😊"
@@ -570,7 +570,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Biovarsol. 3.8 Lt.",
-    price: 35000,
+    price: 33000,
     image: "https://i.ibb.co/PNT0rV6/Galon-biovarsol.jpg",
     type: "liquido",
     detail: "Hecho en Colombia. Elimina la grasa y manchas difíciles en todo tipo de superficies; textiles plásticos, cerámicas, madera, cuero y metal, dejándolas relucientes, libres de bacterias y malos olores.. 😊"
@@ -597,7 +597,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon Removedor de cera o sellador.",
-    price: 26000,
+    price: 24000,
     image: "https://i.ibb.co/jv51KGY/Galon-removedor-cera.jpg",
     type: "liquido",
     detail: "Hecho en Colombia. es un producto diseñado para el eliminar los restos de cera o sello acumulados en el piso debido al encerado o sellado frecuente. 😊"
@@ -624,7 +624,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon sellador o mantenedor de piso.",
-    price: 700,
+    price: 91000,
     image: "https://i.ibb.co/Tq6TgDQ/Galon-sellante-para-pisos.jpg",
     type: "liquido",
     detail: "Hecho en Colombia. Es un producto diseñado para proteger el piso de rayones creando una pelicula protectora y adicional a eso para mantener tu pro brillante, tener en cuenta que lo que hace el producto es realzar el color del piso, ideal para toda clase de pisos. 😊"
@@ -651,7 +651,7 @@ productList.push ({
 productList.push ({
     id: 5, 
     name: "Galon cera autobrillante.",
-    price: 50000,
+    price: 49000,
     image: "https://i.ibb.co/k57sXGP/Galon-cera-autobrillante.jpg",
     type: "liquido",
     detail: "Hecho en Colombia. Es un producto diseñado para darle brillo a tu piso sin tanto esfuerzo, tener en cuenta que lo que hace el producto es realzar el color del piso, ideal para toda clase de pisos, no agrega color y no tiene olor. 😊"
