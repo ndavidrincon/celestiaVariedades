@@ -811,7 +811,7 @@ function renderDetailProduct (product) {
     const divDescription = document.createElement("div");
     divDescription.classList.add("extended-product-info");
     const pPrice = document.createElement("p");
-    pPrice.innerText = product.price;
+    pPrice.innerText = "$"+ product.price.toLocaleString();
     const pName = document.createElement("p");
     pName.innerText = product.name;
     const pDetail = document.createElement("p");
