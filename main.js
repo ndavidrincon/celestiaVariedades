@@ -1,6 +1,7 @@
 const menuEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
+const salirDelCarrito = document.querySelector(".salir-Del-Carrito")
 const productsSelectionContainer = document.querySelector(".products-selection-container");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const burgerIcon = document.querySelector(".menu");
@@ -16,6 +17,7 @@ let numeroProductosAgregados = 0
 menuEmail.addEventListener("click", toggleDesktopMenu);
 burgerIcon.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
+salirDelCarrito.addEventListener("click", toggleCarritoAside)
 
 
 function toggleDesktopMenu () {

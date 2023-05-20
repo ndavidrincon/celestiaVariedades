@@ -184,7 +184,7 @@ nav {
 }
 .mobile-menu .email {
     font-size: var(--sm);
-    font-weight: 300;
+    font-weight: 300px;
 }
 .mobile-menu .sign-out {
     font-size: var(--sm);
@@ -208,11 +208,12 @@ nav {
 .title-container img {
     transform: rotate(180deg);
     margin-right: 14px;
+    cursor: pointer;
 }
 .title {
     font-size: var(--lg);
     font-weight: bold;
-    margin-bottom: .8rem; 
+    margin-bottom: 8px; 
 }
 .order {
     display: grid;
@@ -249,16 +250,17 @@ nav {
 .shopping-cart figure img{
     width: 70px;
     height: 70px;
-    border-radius: .8rem;
+    border-radius: 8px;
     object-fit: cover;
 }
 .x {
-    margin-right: .4rem;
+    margin-right: 6px;
+    width: 24px;
 }
 .x:hover{
     cursor: pointer;
-    border: solid .1rem var(--hospital-green);
-    border-radius: .4rem;
+    border: solid 2px var(--hospital-green);
+    border-radius: 8px;
 }
 
 .shopping-cart p:nth-child(2){
@@ -388,8 +390,9 @@ nav {
 }
 .product-detail-close img {
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: -2px;
+    bottom: -2px;
+    width: 28px;
 }
 .extended-product-detail > img:nth-child(2) {
     width: 100%;
