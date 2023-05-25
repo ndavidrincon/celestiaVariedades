@@ -1,3 +1,8 @@
+swal({
+    title: "Nuestra forma de trabajo!", 
+    text: "✅ Se reciben pedidos hasta la 1 PM para ser despachados en el transcurso del día. \n ✅ Los pedidos que entren después de la 1pm se entregaran para el siguiente día después de la 1pm. \n \n Esto para hacer más productivo y mantener gratuito el domicilio dentro de la ciudad de Bogotá. 😊",
+});
+
 const menuEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
