@@ -87,8 +87,13 @@ nav {
     cursor: pointer;
 }
 .navbar-shopping-cart {
+    display: inline-flex;
     position: relative;
     cursor: pointer;
+}
+.imgWhatsapp img {
+    width: 35px;
+    margin-right: 8px;
 }
 .navbar-shopping-cart div {
     /* antes de poner displey felx no me centraba el numero 2, es decir el contenido del div, segun el inspector era porque tenia propiedades de block, entonces tenia que volverlo despley flex para que las propiedades justify-content se aplicaran */
@@ -96,15 +101,16 @@ nav {
     width: 16px;
     height: 16px;
     background-color: var(--hospital-green);
+    color: white;
     border-radius: 50%;
     font-size: var(--sm);
     font-weight: bold;
     /* cuando ponemos absolute, es porque queremos que el contenido de la etiqueta en el mismo espacio del padre, para esto el padre debe ser relative */
     position: absolute;
-    top: -6px;
+    top: -10px;
     right: -3px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 /* menu del desktop */
