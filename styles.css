@@ -326,11 +326,6 @@ nav {
     padding: 0 8px 0 8px;
 
 }
-.product-info figure {
-    /* aca le quitamos la margen al elemento que esta dentro de la etiqueta figure */
-    margin: 0;
-    cursor: pointer;
-}
 .product-info div p:nth-child(1) {
     /* el primer parrafo que este dentro de div que este dentro de product-info va a tener los siguientes estilos 
     el primer cambio es que va a ser mas grueso
@@ -341,25 +336,6 @@ nav {
     font-size: var(--md);
     margin-top: 0px;
     margin-bottom: 4px;
-}
-.product-info div p:nth-child(2) {
-    /* el segundo parrafo que este dentro de div que este dentro de product-info va a tener los siguientes estilos 
-    el primer cambio es que va a ser pequeña la letra
-    el segundo cambio que va a tener margen de arriba de 0
-    el tercer cambio que va a tener margen de abajo de 0
-    el cuarto le cambiamos el color de la letra para que sea mas clara y resalte menos*/
-    font-size: var(--sm);
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: var(--very-light-pink);
-}
-.Product-Info-Price li {
-    list-style: none;
-}
-.product-info figure img {
-    /* solamente las imagenes que esten en el contenedor figure dentro de la clase product-info van a resivir las siguientes modificaciones */
-    width: 35px;
-    height: 35px;
 }
 
 /* extended-product-detail */
@@ -372,18 +348,21 @@ nav {
 .extended-product-detail {
     background-color: var(--white);
     width: 360px;
+    height: 610px;
     top: 61px;
     padding-bottom: 24px;
     position: fixed;
     right: 0;
+    overflow-y: auto;
+    border-radius: 0 0 24px 24px;
 }
 .product-detail-close {
     background: var(--white);
     width: 14px;
     height: 14px;
-    position: absolute;
+    position: sticky;
     /* position absolute siempre ubica al elemento en la posicion 0,0 del padre a partir de ahi comenzamos a moverlo con los atributos de abajo */
-    top: 24px;
+    top: 40px;
     left: 24px;
     /* z-index indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor. */
     z-index: 2;
@@ -397,13 +376,13 @@ nav {
 }
 .product-detail-close img {
     position: absolute;
-    right: 2px;
-    bottom: 2px;
-    width: 20px;
+    right: 4px;
+    bottom: 4px;
+    width: 15px;
 }
 .extended-product-detail > img:nth-child(2) {
     width: 100%;
-    height: 360px;
+    height: 362px;
     object-fit: cover;
     border-radius: 0 0 24px 24px;
 }
@@ -416,17 +395,50 @@ nav {
     margin-top: 0;
     margin-bottom: 4px;
 }
-.extended-product-info p:nth-child(2) {
+.extended-product-info .detail {
     color: var(--very-light-pink);
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 36px;
 }
-.extended-product-info p:nth-child(3) {
+.container-quantities {
+    display: flex;
+    align-items: flex-start;
+}
+.container-quantities p {
+    margin: 0px;
+}
+.container-prices {
+    width: 280px;
+    border-radius: 20px 20px 20px 20px;
+    height: 91px;
+    overflow-y: auto;
+    position: relative;
+    top: -26px;
+    left: 15px;
+}
+.container-prices div {
+    width: 150px;
+    cursor: pointer;
     color: var(--strong-gray);
-    font-size: var(--md);
-    margin-top: 0;
-    margin-bottom: 36px;
+}
+.container-prices .prices:hover {
+    background-color: var(--hospital-green);
+    color: var(--white);
+}
+.prices p:nth-child(1) {
+    margin: 0px;
+}
+.prices p:nth-child(2) {
+    margin: 0px;
+}   
+.prices {
+    display: inline-flex;
+    justify-content: space-between;
+    border: 1px solid var(--hospital-green);
+    margin: 4px 8px 4px 8px;
+    padding: 8px;
+    border-radius: 10px 10px 10px 10px;
 }
 .primary-button {
     background-color: var(--hospital-green);
