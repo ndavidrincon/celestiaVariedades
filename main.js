@@ -10,8 +10,9 @@ swal({
 const menuEmail = document.querySelector(".navbar-email");
 const desktopMenu = document.querySelector(".desktop-menu");
 const menuCarritoIcon = document.querySelector(".navbar-shopping-cart");
-const salirDelCarrito = document.querySelector(".salir-Del-Carrito")
+const salirDelCarrito = document.querySelector(".salir-Del-Carrito");
 const productsSelectionContainer = document.querySelector(".products-selection-container");
+const primaryButton = document.querySelector(".primary-button");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
 const burgerIcon = document.querySelector(".menu");
 const mobileMenu = document.querySelector(".mobile-menu");
@@ -27,6 +28,7 @@ let selectedPrices;
 let selectedImage;
 
 menuEmail.addEventListener("click", toggleDesktopMenu);
+primaryButton.addEventListener("click", informationAlert);
 burgerIcon.addEventListener("click", toggleMobileMenu);
 menuCarritoIcon.addEventListener("click", toggleCarritoAside);
 salirDelCarrito.addEventListener("click", toggleCarritoAside)
@@ -389,7 +391,9 @@ productList.push ({
 productList.push ({
     id: 6,
     name: "Trapeador bicolor 900gr",
-    price: 8000,
+    quantities: {
+        unidad: 8000
+    },
     image: "https://i.linio.com/p/8903fa5c2726a5b073175d3da65ce1aa-product.jpg",
     type: "liquido",
     detail: "Hecho 100% en algodon, lo tenemos disponible en color blanco ó blanco con negro."
@@ -422,6 +426,21 @@ productList.push ({
     detail: "Hecho 100% en algodon, lo tenemos en color blanco ó blanco con negro."
 });
 
+
+function informationAlert() {
+    
+    if (productsInTheCar.length === 0) {
+        swal({
+            title: "¡Ups!",
+            text: "Olvidaste seleccionar al menos un producto, por favor dale click al boton 🆗 y regresa a nuestra pagina principar para que puedas seleccionar tus productos favoritos."
+        });
+    } else {
+        swal({
+            title: "¡Te pedimos disculpas!", 
+            text: "✖️ En estos momento no tenemos la opción de compra en linea habilitada pero, estamos trabajando en ello para que puedas hacerlo lo antes posible, de momento para que podamos ayudarnos mutuamente, los productos que seleccionaste anteriormente nos los puedes hacer llegar, ya sea escribiendolos o por un pantallazo por medio del boton de whatsapp habilítado en la parte superior derecha de la pagina. \n \n ✅ Agradecemos mushisimo tu compresión, que tengas un excelente día y espero nos puedas contactar. 😊",
+        });
+    }  
+};
 
 function renderProducts (products) {
 
