@@ -1,5 +1,5 @@
 // NOTA IMPORTANTE 
-// FALTA crear la funcion para que cuando se le de click al boton del precio quede pintado el precio seleccionado
+// FALTA crear la funcion para que cuando se le de click al botón del precio quede pintado el precio seleccionado
 // falta hacer marge a origin main
 
 swal({
